@@ -1,0 +1,37 @@
+@import "variables";
+@import "bootstrap";
+@import "compass/css3";
+
+$bookshoutGray: #1d1a1b;
+
+@mixin standard-gradient {
+  background-color: $bookshoutGray;
+  background-size: 20px 1500px;
+  background-image: image-url('http://455ce11841531d1cb11e-afa4cd23c744d46d9ca7b2454abb9747.r55.cf1.rackcdn.com/gradient.gif');
+  background-repeat: repeat-x;
+  background-position:left top;
+  min-height: 100%;
+}
+
+@mixin tyopgraphy {
+  color: $white;
+}
+
+body {
+  @include standard-gradient;
+  .extra {
+    margin-top: 300px;
+  }
+  .centered {
+    text-align: center;
+  }
+
+  .info {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+
+h1,h2,h3,h4,h5,p,span {
+  @include tyopgraphy;
+}
